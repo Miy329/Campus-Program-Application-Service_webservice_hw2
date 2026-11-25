@@ -98,11 +98,17 @@ npm run db:reset
 - `tests/`: 기반·필수·선택 심화 테스트
 - `docs/API.md`: 상태·이력·입출력 계약
 
-## 제출 전 작성할 내용
+## 제출 내용
 
-이 부분을 본인의 서비스 소개, 변경 파일, 구현 완료 여부, 실행 환경, 알려진 문제, 보고서·검증 증거 링크와 AI 사용 요약으로 바꾸세요. GitHub URL·커밋 SHA를 LMS에 제출하고 보고서 PDF를 저장소 `docs/report.pdf`와 LMS에 같은 버전으로 첨부합니다.
+- 서비스: 학생 참가 신청, 대기 취소, 담당 운영자의 승인과 승인 취소, 다음 대기자 자동 승인, 변경 기록
+- 제공 코드: src/app.js, src/auth.js, src/db.js, src/repository.js, src/errors.js, src/server.js, public/, tests/ (수정하지 않음)
+- 변경 파일: src/application-service.js (TODO 4개와 보조 함수 구현), scripts/show-results.js (T25~T32 결과 확인용으로 추가)
+- 구현 완료 여부: TODO 4개 모두 완료. npm test 4건, npm run test:assignment 32건, npm run test:advanced 1건 통과
+- 실행 환경: Windows, Node.js v24.21.0
+- 알려진 문제: 동시 승인 테스트 20회 통과는 동시 처리 문제가 없다는 증명은 아님
+- 보고서와 검증 증거: docs/report.pdf
+- AI 사용: Claude와 ChatGPT 사용. TODO 코드와 확인용 스크립트 작성, 보고서 문장 정리에 사용하였고 테스트 실행, 화면 검증, cancel() 역할 검사 수정은 직접 수행함. 자세한 내용은 보고서 참고
 
-`node_modules`, 생성 DB·서명 키, 실제 `.env`·JWT와 개인 정보는 제출하지 않습니다. 제공 코드와 직접 구현한 부분을 구분합니다.
 
 ## 참고 문서
 
